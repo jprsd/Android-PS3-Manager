@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/miscTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16sp"
+                android:gravity="center"
+                android:text="@string/misc_features"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/notifyLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/miscTitle"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/message_notification"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/notifyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notifyLabel"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/message"
+                android:inputType="textPersonName"
+                android:importantForAutofill="no" />
+
+            <Button
+                android:id="@+id/notifyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notifyText"
+                android:layout_alignStart="@id/notifyText"
+                android:layout_alignEnd="@id/notifyText"
+                android:layout_centerHorizontal="true"
+                android:text="@string/send" />
+
+            <TextView
+                android:id="@+id/buzzerLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notifyButton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="@string/buzzer_control"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/linearBuzzerOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buzzerLabel"
+                android:layout_centerHorizontal="true"
+                android:minWidth="270dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/singleRingButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/single"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:id="@+id/doubleRingButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/double_twice"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:id="@+id/tripleRingButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/triple"
+                    tools:ignore="ButtonStyle" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lightLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearBuzzerOptions"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="@string/light_settings"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/lightColorRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lightLabel"
+                android:layout_centerHorizontal="true"
+                android:checkedButton="@id/redRadioButton"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/redRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/radio_buton_color"
+                    android:text="@string/red" />
+
+                <RadioButton
+                    android:id="@+id/greenRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/radio_buton_color"
+                    android:text="@string/green" />
+
+                <RadioButton
+                    android:id="@+id/yellowRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/radio_buton_color"
+                    android:text="@string/yellow" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/lightModeRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lightColorRadioGroup"
+                android:layout_centerHorizontal="true"
+                android:checkedButton="@id/offRadioButton"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/offRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/radio_buton_color"
+                    android:text="@string/off" />
+
+                <RadioButton
+                    android:id="@+id/onRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/radio_buton_color"
+                    android:text="@string/on" />
+
+                <RadioButton
+                    android:id="@+id/blinkFastRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/radio_buton_color"
+                    android:text="@string/blink_fast" />
+
+                <RadioButton
+                    android:id="@+id/blinkSlowButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/radio_buton_color"
+                    android:text="@string/blink_slow" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/lightSetButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lightModeRadioGroup"
+                android:layout_centerHorizontal="true"
+                android:text="@string/execute" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

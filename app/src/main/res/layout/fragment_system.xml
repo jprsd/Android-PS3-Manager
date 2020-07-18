@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.system.SystemFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/systemTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="@string/ps3_system_settings"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/connectionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/systemTitleText"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/ps3mapi_connection"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/ipAddressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/connectionText"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/console_ip"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/connectButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ipAddressText"
+                android:layout_alignStart="@id/ipAddressText"
+                android:layout_alignEnd="@id/ipAddressText"
+                android:layout_centerHorizontal="true"
+                android:text="@string/connect" />
+
+            <Button
+                android:id="@+id/disconnectButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/connectButton"
+                android:layout_alignStart="@id/ipAddressText"
+                android:layout_alignEnd="@id/ipAddressText"
+                android:layout_centerHorizontal="true"
+                android:text="@string/disconnect" />
+
+            <TextView
+                android:id="@+id/powerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/disconnectButton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="@string/system_power_options"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/powerRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/powerText"
+                android:layout_centerHorizontal="true"
+                android:checkedButton="@id/shutdownButton"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/shutdownButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/radio_buton_color"
+                    android:text="@string/shutdown" />
+
+                <RadioButton
+                    android:id="@+id/rebootButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/radio_buton_color"
+                    android:text="@string/reboot" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/powerExecuteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/powerRadioGroup"
+                android:layout_alignStart="@id/powerRadioGroup"
+                android:layout_alignEnd="@id/powerRadioGroup"
+                android:layout_centerHorizontal="true"
+                android:text="@string/execute" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.memory.MemoryFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/memoryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="@string/process_memory_title"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/processLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/memoryTitle"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/attached_eboot_id"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/processIdText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/processLabel"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/not_attached"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/attachButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/processIdText"
+                android:layout_alignStart="@id/processLabel"
+                android:layout_alignEnd="@id/processLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/attach" />
+
+            <TextView
+                android:id="@+id/readMemoryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/attachButton"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/get_memory"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/linearMemGet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/readMemoryLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/memAddressGetText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/address_hint"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/bytesNumText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/length_bytes_hint"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/readMemoryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearMemGet"
+                android:layout_alignStart="@id/linearMemGet"
+                android:text="@string/read" />
+
+            <TextView
+                android:id="@+id/memoryOutputText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearMemGet"
+                android:layout_alignEnd="@id/linearMemGet"
+                android:layout_alignBottom="@id/readMemoryButton"
+                android:layout_toEndOf="@id/readMemoryButton"
+                android:background="#E3EEF8"
+                android:gravity="center"
+                android:hint="@string/address_value"
+                android:scrollHorizontally="true"
+                android:textColor="@android:color/black"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/writeMemoryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/memoryOutputText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="@string/set_memory"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/linearMemSet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/writeMemoryLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/memAddressSetText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/address_hint"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/memValueSetText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/address_value"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/writeMemoryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearMemSet"
+                android:layout_alignStart="@id/linearMemSet"
+                android:layout_alignEnd="@id/linearMemSet"
+                android:layout_centerHorizontal="true"
+                android:text="@string/write" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
