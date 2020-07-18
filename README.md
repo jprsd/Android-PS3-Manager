@@ -5,9 +5,9 @@
 <p>
   <img src="https://github.com/jprsd/Android-PS3-Manager/blob/master/System.jpg" alt="System screen" width="30%" height="30%">
   <img src="https://github.com/jprsd/Android-PS3-Manager/blob/master/Memory.jpg" alt="Memory screen" width="30%" height="30%">
+  <img src="https://github.com/jprsd/Android-PS3-Manager/blob/master/Console_IDs.jpg" alt="Console IDs screen" width="30%" height="30%">
 </p>
 <p>
-  <img src="https://github.com/jprsd/Android-PS3-Manager/blob/master/Console_IDs.jpg" alt="Console IDs screen" width="30%" height="30%">
   <img src="https://github.com/jprsd/Android-PS3-Manager/blob/master/Misc.jpg" alt="Miscellaneous screen" width="30%" height="30%">
+  <img src="https://github.com/jprsd/Android-PS3-Manager/blob/master/App_Info.jpg" alt="Console IDs screen" width="30%" height="30%">
 </p>
-<p><img src="https://github.com/jprsd/Android-PS3-Manager/blob/master/App_Info.jpg" alt="Console IDs screen" width="30%" height="30%"></p>
